@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Tasks</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+  <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+  <style>
+    .dropdown-toggle::after {
+      display: none;
+    }
+
+    .task {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .task label.checked {
+      text-decoration: line-through;
+    }
+
+    .filters span.active {
+      color: rgb(34, 137, 254);
+
+    }
+    .filters span {
+      cursor: pointer;
+      color: rgb(115, 115, 115);
+      margin-right: 0.5rem;
+    }
+
+    .filters span:hover {
+      cursor: pointer;
+      color: rgba(34, 137, 254, 0.874);
+      margin-right: 0.5rem;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row card">
+      <div class="col-12">
+        <div class="card-header">My Tasks</div>
+        <div class="card-body">
+          <form>
+            <div class="input-group">
+              <input type="text" name="" id="txtTaskName" class="form-control" />
+
+              <button id="ekleBtn" class="btn btn-success" value="">
+                Add
+              </button>
+            </div>
+          </form>
+          <div class="alert alert-warning" style="display: none" id="errormessage">
+            Task area must be filled.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row card mt-5">
+      <div class="col-12">
+ 
+        <div class="card-header controls">
+          <div class="row">
+
+            <div class="col-4 text-center d-flex align-items-center justify-content-between">
+
+              <div class="filters">
+                <span id="all" class="active">
+                  All
+                </span> 
+                <span id="pending" class="">
+                  Pending
+                </span>
+                <span id="completed" class="">
+                  Completed
+                </span>
+              </div>
+
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4 text-end"> <button id="temizleBtn" class="btn btn-danger btn-sm">
+                Clear
+              </button></div>
+
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush mt-2"></ul>
+        </div>
+
+        <div class="card-footer">
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
